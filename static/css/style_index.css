@@ -15,7 +15,7 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 960px;
+    height: 500px;
 }
 
 .bg1 {
@@ -30,7 +30,7 @@
     color: white;
 }
 .card-container {
-  perspective: 700px;
+  perspective: 50%;
 }
 
 .card-flip, .card-container {
@@ -61,7 +61,86 @@
   grid-area: frontAndBack;
 }
 
+div .img-logo{
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+
+  -webkit-animation: breathing 3s ease-out infinite alternate-reverse;
+  animation: breathing 3s ease-out infinite normal;
+}
+
 .back {
   grid-area: frontAndBack;
   transform: rotateY(-180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(.9);
+    -ms-transform: scale(.9);
+    transform: scale(.9);
+  }
 }
